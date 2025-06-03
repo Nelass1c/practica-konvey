@@ -65,7 +65,7 @@ curl http://127.0.0.1:8080
 - С помощью `curl` был сделан запрос к локальному HTTP-серверу, что сгенерировало сетевой трафик.
 - Сетевой трафик на интерфейсе `lo` (loopback) был захвачен с использованием Wireshark.
 - В захваченном трафике было идентифицировано трехэтапное TCP-рукопожатие (пакеты SYN, SYN/ACK, ACK) между клиентом (`curl`) и сервером.
-- Захваченный трафик сохранен в файл (`day02_handshake.pcap`).
+- Захваченный трафик сохранен в файл (![file](https://raw.githubusercontent.com/Nelass1c/practica-konvey/blob/main/day2/wireshark/day02_handshake.pcap)).
 
 ---
 
