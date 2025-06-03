@@ -82,6 +82,9 @@ ssh ratka@localhost
 ![Скриншот 5: Тестирование SSH-подключения к localhost](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s5.jpg)
 *Успешное SSH-подключение к `ratka@localhost`.*
 
+![Скриншот 6: Создание снапшота clean-base](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s6.jpg)
+*Снят снапшот: clean-base.*
+
 ---
 
 ## 4. Результаты
