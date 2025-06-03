@@ -48,13 +48,13 @@ curl http://127.0.0.1:8080
 ### 3.2. Скриншоты
 
 ![Скриншот 1: Запуск HTTP-сервера и запрос через curl](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s1.jpg)
-*Запуск HTTP-сервера, выполнение GET-запроса через `curl` и отображение листинга директории в браузере.*
+*Запуск HTTP-сервера, выполнение GET-запроса через `curl` и отображение листинга директории в браузере и HTML-ответ локального HTTP-сервера на запрос `curl`, выведенный в терминал.*
 
 ![Скриншот 2: HTML-ответ сервера в терминале](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s2.jpg)
-*HTML-ответ локального HTTP-сервера на запрос `curl`, выведенный в терминал.*
+*Захват и анализ TCP-трафика на интерфейсе `lo` в Wireshark, отображение пакетов трехэтапного рукопожатия.*
 
 ![Скриншот 3: Анализ TCP-трафика в Wireshark](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s3.jpg)
-*Захват и анализ TCP-трафика на интерфейсе `lo` в Wireshark, отображение пакетов трехэтапного рукопожатия.*
+
 
 ---
 
