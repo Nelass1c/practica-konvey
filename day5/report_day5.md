@@ -50,8 +50,6 @@ sudo nmcli device disconnect eth0
 sudo nmcli device connect eth0
 ```
 
-Отключение и последующее подключение интерфейса принудительно запускает процесс получения нового IP-адреса от DHCP-сервера.
-
 **Фильтрация трафика в Wireshark:**
 
 ```bash
@@ -66,11 +64,11 @@ curl ifconfig.me
 
 ### 3.2. Скриншоты
 
-Первой была рассчитана подсеть для 1000 хостов командой `ipcalc 172.16.0.0 -s 1000`, в результате чего была выделена подсеть `172.16.0.0/22`.
+Отключение и последующее подключение интерфейса принудительно запускает процесс получения нового IP-адреса от DHCP-сервера.
 
-![Расчет подсети на 1000 хостов с помощью ipcalc](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day4/subnets/1000_hosts.jpg)
+![получения нового IP-адреса от DHCP-сервера](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day5/screenshots/s1.jpg)
 
-Аналогично, используя следующий свободный IP-адрес, были рассчитаны остальные подсети. Скриншоты всех расчетов находятся в папке: [subnets](https://github.com/Nelass1c/practica-konvey/tree/main/day4/subnets).
+
 
 
 По результатам расчетов была составлена итоговая таблица подсетей:
