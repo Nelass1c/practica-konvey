@@ -1,0 +1,238 @@
+# Nmap 7.95 scan initiated Tue Jun 10 21:41:11 2025 as: /usr/lib/nmap/nmap -sV --script=vuln -p 22,23,53,80,90,139,222,443,445 -oN vulns_targeted.txt 192.168.1.1
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 192.168.1.1
+Host is up (0.00063s latency).
+
+PORT    STATE SERVICE      VERSION
+22/tcp  open  ssh          (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|     SSH-2.0-server
+|     curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,kexguess2@matt.ucc.asn.au,kex-strict-s-v00@openssh.com
+|     4ssh-ed25519,ecdsa-sha2-nistp521,rsa-sha2-256,ssh-rsa
+|     achacha20-poly1305@openssh.com,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes256-ctr
+|     achacha20-poly1305@openssh.com,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes256-ctr
+|     hmac-sha2-256
+|     hmac-sha2-256
+|     none
+|_    none
+23/tcp  open  telnet
+| fingerprint-strings: 
+|   GenericLines: 
+|     [KKeeneticOS version 4.03.C.2.0-2, copyright (c) 2010-2025 Keenetic Ltd.
+|     Login: 
+|     Password: 
+|     Login:
+|   GetRequest: 
+|     HTTP/1.0
+|     [KKeeneticOS version 4.03.C.2.0-2, copyright (c) 2010-2025 Keenetic Ltd.
+|     Login:
+|   Help: 
+|     HELP
+|     [KKeeneticOS version 4.03.C.2.0-2, copyright (c) 2010-2025 Keenetic Ltd.
+|     Login:
+|   NULL, tn3270: 
+|     [KKeeneticOS version 4.03.C.2.0-2, copyright (c) 2010-2025 Keenetic Ltd.
+|     Login:
+|   SIPOptions: 
+|     OPTIONS sip:nm SIP/2.0
+|     Via: SIP/2.0/TCP nm;branch=foo
+|     From: <sip:nm@nm>;tag=root
+|     <sip:nm2@nm2>
+|     Call-ID: 50000
+|     CSeq: 42 OPTIONS
+|     Max-Forwards: 70
+|     Content-Length: 0
+|     Contact: <sip:nm@nm>
+|     Accept: application/sdp
+|     [KKeeneticOS version 4.03.C.2.0-2, copyright (c) 2010-2025 Keenetic Ltd.
+|_    Login:
+53/tcp  open  domain       (generic dns response: NXDOMAIN)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp  open  http         Web server
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-majordomo2-dir-traversal: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: Web server
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Web server
+|     Date: Wed, 11 Jun 2025 01:41:52 GMT
+|     Content-Length: 70
+|     Connection: close
+|     X-Detail: 0xcc56, missing host header
+|     <html>
+|     <head>
+|     </head>
+|     <body>
+|     <h1>400: Bad Request</h1>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Web server
+|     Date: Wed, 11 Jun 2025 01:41:57 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Web server</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Web server
+|     Date: Wed, 11 Jun 2025 01:41:52 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Web server</center>
+|     </body>
+|_    </html>
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+90/tcp  open  http         lighttpd 1.4.76
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+| http-enum: 
+|_  /manifest.json: Manifest JSON File
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-server-header: lighttpd/1.4.76
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+139/tcp open  netbios-ssn?
+222/tcp open  ssh          Dropbear sshd (protocol 2.0)
+443/tcp open  https?
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+445/tcp open  microsoft-ds
+| fingerprint-strings: 
+|   SMBProgNeg: 
+|     SMBr
+|     WORKGROUP
+|_    KEENETIC-6049
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port22-TCP:V=7.95%I=7%D=6/10%Time=6848DEDF%P=x86_64-pc-linux-gnu%r(NULL
+SF:,248,"SSH-2\.0-server\r\n\0\0\x024\x05\x14\x07\xcc\xf8\xad\xe5\x8cZ\xd0
+SF:\x171\x9a\x12h--\xe8\0\0\0\xd8curve25519-sha256,curve25519-sha256@libss
+SF:h\.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-
+SF:hellman-group14-sha256,diffie-hellman-group14-sha1,kexguess2@matt\.ucc\
+SF:.asn\.au,kex-strict-s-v00@openssh\.com\0\0\x004ssh-ed25519,ecdsa-sha2-n
+SF:istp521,rsa-sha2-256,ssh-rsa\0\0\0achacha20-poly1305@openssh\.com,aes12
+SF:8-gcm@openssh\.com,aes256-gcm@openssh\.com,aes128-ctr,aes256-ctr\0\0\0a
+SF:chacha20-poly1305@openssh\.com,aes128-gcm@openssh\.com,aes256-gcm@opens
+SF:sh\.com,aes128-ctr,aes256-ctr\0\0\0\rhmac-sha2-256\0\0\0\rhmac-sha2-256
+SF:\0\0\0\x04none\0\0\0\x04none\0\0\0\0\0\0\0\0\0\0\0\0\0i\xf6r\xf44");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port23-TCP:V=7.95%I=7%D=6/10%Time=6848DEDF%P=x86_64-pc-linux-gnu%r(NULL
+SF:,63,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\x1b\[KKeeneticOS\
+SF:x20version\x204\.03\.C\.2\.0-2,\x20copyright\x20\(c\)\x202010-2025\x20K
+SF:eenetic\x20Ltd\.\r\n\r\nLogin:\x20\x1b\[K")%r(GenericLines,7E,"\xff\xfd
+SF:\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\x1b\[KKeeneticOS\x20version\x2
+SF:04\.03\.C\.2\.0-2,\x20copyright\x20\(c\)\x202010-2025\x20Keenetic\x20Lt
+SF:d\.\r\n\r\nLogin:\x20\x1b\[K\r\nPassword:\x20\x1b\[K\r\nLogin:\x20\x1b\
+SF:[K")%r(tn3270,63,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\x1b\
+SF:[KKeeneticOS\x20version\x204\.03\.C\.2\.0-2,\x20copyright\x20\(c\)\x202
+SF:010-2025\x20Keenetic\x20Ltd\.\r\n\r\nLogin:\x20\x1b\[K")%r(GetRequest,7
+SF:5,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03GET\x20/\x20HTTP/1\.
+SF:0\r\n\r\n\x1b\[KKeeneticOS\x20version\x204\.03\.C\.2\.0-2,\x20copyright
+SF:\x20\(c\)\x202010-2025\x20Keenetic\x20Ltd\.\r\n\r\nLogin:\x20\x1b\[K")%
+SF:r(RPCCheck,C,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03")%r(Help
+SF:,69,"\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03HELP\r\n\x1b\[KKee
+SF:neticOS\x20version\x204\.03\.C\.2\.0-2,\x20copyright\x20\(c\)\x202010-2
+SF:025\x20Keenetic\x20Ltd\.\r\n\r\nLogin:\x20\x1b\[K")%r(SIPOptions,142,"\
+SF:xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03OPTIONS\x20sip:nm\x20SIP
+SF:/2\.0\r\nVia:\x20SIP/2\.0/TCP\x20nm;branch=foo\r\nFrom:\x20<sip:nm@nm>;
+SF:tag=root\r\nTo:\x20<sip:nm2@nm2>\r\nCall-ID:\x2050000\r\nCSeq:\x2042\x2
+SF:0OPTIONS\r\nMax-Forwards:\x2070\r\nContent-Length:\x200\r\nContact:\x20
+SF:<sip:nm@nm>\r\nAccept:\x20application/sdp\r\n\r\n\x1b\[KKeeneticOS\x20v
+SF:ersion\x204\.03\.C\.2\.0-2,\x20copyright\x20\(c\)\x202010-2025\x20Keene
+SF:tic\x20Ltd\.\r\n\r\nLogin:\x20\x1b\[K")%r(NCP,C,"\xff\xfd\x01\xff\xfd\x
+SF:1f\xff\xfb\x01\xff\xfb\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.95%I=7%D=6/10%Time=6848DEE4%P=x86_64-pc-linux-gnu%r(DNSV
+SF:ersionBindReqTCP,20,"\0\x1e\0\x06\x80\x83\0\x01\0\0\0\0\0\0\x07version\
+SF:x04bind\0\0\x10\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.95%I=7%D=6/10%Time=6848DEE0%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,E9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20Web\x20serv
+SF:er\r\nDate:\x20Wed,\x2011\x20Jun\x202025\x2001:41:52\x20GMT\r\nContent-
+SF:Length:\x2070\r\nConnection:\x20close\r\nX-Detail:\x200xcc56,\x20missin
+SF:g\x20host\x20header\r\n\r\n<html>\n<head>\n</head>\n<body>\n<h1>400:\x2
+SF:0Bad\x20Request</h1>\n</body>\n</html>")%r(HTTPOptions,E9,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nServer:\x20Web\x20server\r\nDate:\x20Wed,\x20
+SF:11\x20Jun\x202025\x2001:41:52\x20GMT\r\nContent-Length:\x2070\r\nConnec
+SF:tion:\x20close\r\nX-Detail:\x200xcc56,\x20missing\x20host\x20header\r\n
+SF:\r\n<html>\n<head>\n</head>\n<body>\n<h1>400:\x20Bad\x20Request</h1>\n<
+SF:/body>\n</html>")%r(RTSPRequest,131,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nServer:\x20Web\x20server\r\nDate:\x20Wed,\x2011\x20Jun\x202025\x200
+SF:1:41:52\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20155\
+SF:r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Req
+SF:uest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1>
+SF:</center>\r\n<hr><center>Web\x20server</center>\r\n</body>\r\n</html>\r
+SF:\n")%r(X11Probe,131,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20W
+SF:eb\x20server\r\nDate:\x20Wed,\x2011\x20Jun\x202025\x2001:41:52\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nContent-Length:\x20155\r\nConnection:\x
+SF:20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></he
+SF:ad>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr
+SF:><center>Web\x20server</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFou
+SF:rRequest,E9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20Web\x20se
+SF:rver\r\nDate:\x20Wed,\x2011\x20Jun\x202025\x2001:41:52\x20GMT\r\nConten
+SF:t-Length:\x2070\r\nConnection:\x20close\r\nX-Detail:\x200xcc56,\x20miss
+SF:ing\x20host\x20header\r\n\r\n<html>\n<head>\n</head>\n<body>\n<h1>400:\
+SF:x20Bad\x20Request</h1>\n</body>\n</html>")%r(RPCCheck,131,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nServer:\x20Web\x20server\r\nDate:\x20Wed,\x20
+SF:11\x20Jun\x202025\x2001:41:57\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ontent-Length:\x20155\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><t
+SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
+SF:x20Bad\x20Request</h1></center>\r\n<hr><center>Web\x20server</center>\r
+SF:\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port445-TCP:V=7.95%I=7%D=6/10%Time=6848DEE4%P=x86_64-pc-linux-gnu%r(SMB
+SF:ProgNeg,69,"\0\0\0e\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\xfc\xff\0\0\0\0\x01\0\0\0\0\0\|
+SF:\xe2\0\0\xd3I\x1d\x01r\xda\xdb\x01\0\0\x08\x20\0\xc3KcG\x8e\xee\x8f\xc4
+SF:WORKGROUP\0KEENETIC-6049\0");
+MAC Address: 50:FF:20:D3:18:F7 (Keenetic Limited)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun 10 21:51:16 2025 -- 1 IP address (1 host up) scanned in 605.41 seconds
