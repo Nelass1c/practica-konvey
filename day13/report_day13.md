@@ -65,10 +65,10 @@ zeek-cut id.orig_h id.resp_h id.resp_p proto < conn.log | sort | uniq -c | sort 
 
 -   **Ключевые скриншоты:**
 
-    ![Скриншот 1: Анализ DNS и HTTP логов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day13/screenshots/s3.png)
+    ![Скриншот 1: Анализ DNS и HTTP логов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day13/screenshots/s3.jpg)
     * **Описание:** На скриншоте виден результат анализа `dns.log` (вверху), где был обнаружен запрос к домену `www.pcapworkshop.net`. В нижней части вывод `http.log` подтверждает, что внутренний хост `172.16.1.35` действительно обращался по этому адресу.
 
-    ![Скриншот 2: Анализ сетевых соединений](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day13/screenshots/s2.png)
+    ![Скриншот 2: Анализ сетевых соединений](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day13/screenshots/s2.jpg)
     * **Описание:** Вывод команды для анализа `conn.log` показывает прямое TCP-соединение от хоста `172.16.1.35` к внешнему IP-адресу `203.161.53.240` по порту 80 (HTTP). Это доказывает факт установления сессии с сайтом, найденным на предыдущем шаге.
 
     ![Скриншот 3: Проверка IP-адреса на VirusTotal](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day13/screenshots/s1.png)
