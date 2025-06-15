@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	analyzer
+#open	2025-06-15-14-01-00
+#fields	ts	cause	analyzer_kind	analyzer_name	uid	fuid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	failure_reason	failure_data
+#types	time	string	string	string	string	string	addr	port	addr	port	string	string
+1681104972.688240	violation	packet	TEREDO	CRsUa31RhycbvxcpRb	-	172.16.1.35	4500	208.54.83.35	4500	Truncated Teredo or invalid inner IP version	\x00\x00\x00\x00\xc9\xc3\x85\x14k7\xf2s\xde_6\xa3\xc5\x82\x16\x04. %\x08\x00\x00\x00\x05\x00\x00\x00P*\x00\x004\x19=\xae\x0d
+#close	2025-06-15-14-01-00

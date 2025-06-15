@@ -1,0 +1,11 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2025-06-15-14-01-00
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	origin	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1681104982.873714	C6NIwr4JYOXqYTM83e	172.16.1.35	61646	203.161.53.240	80	1	GET	www.pcapworkshop.net	/	-	1.1	Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1	-	0	306	200	OK	-	-	(empty)	-	-	-	-	-	-	FVo6Rk4kDKv3LgT0B7	-	text/html
+1681104983.009886	CqK0HP2n6v0Oggnvx4	172.16.1.35	61645	203.161.53.240	80	1	GET	www.pcapworkshop.net	/favicon.ico	http://www.pcapworkshop.net/	1.1	Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1	-	0	282	404	Not Found	-	-	(empty)	-	-	-	-	-	-	FkK2Nq4b6INQwdOB3f	-	text/html
+#close	2025-06-15-14-01-00

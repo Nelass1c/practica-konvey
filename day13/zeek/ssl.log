@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	ssl
+#open	2025-06-15-14-01-00
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	cipher	curve	server_name	resumed	last_alert	next_protocol	established	ssl_history	cert_chain_fps	client_cert_chain_fps	sni_matches_cert
+#types	time	string	addr	port	addr	port	string	string	string	string	bool	string	string	bool	string	vector[string]	vector[string]	bool
+1681104962.180199	Cd1cuq31DYiC5caFb8	172.16.1.35	61639	17.57.144.91	5223	TLSv13	TLS_AES_256_GCM_SHA384	x25519	courier.push.apple.com	F	-	-	T	CsiI	-	-	-
+1681104962.180199	CmDQgA2r3j4wqd0Q6	172.16.1.35	61638	17.167.200.70	443	TLSv12	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256	x25519	gsp85-ssl.ls.apple.com	F	-	http/1.1	T	CsxknGIti	e7630bcf6d7025a95f83d1ceb5785aec4705b7178bf54071cac36df2eb77c156,70db9ded944dd35d474ea15ff2aa4e25f393a893ecda54359d305bc319649817	(empty)	T
+1681104962.738812	CM3uZN1lj9ZkcRHvCa	172.16.1.35	61641	17.248.241.40	443	TLSv12	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384	x25519	p31-fmfmobile.icloud.com	F	-	http/1.1	T	CsxuknGIi	d04278c30212daad3103fe8806613f939fb17ce380314b4e42126b06cf52911c,c9b06cc083186220618e61a8772640f824df69d561ad56bdc15ad56d0ce08608	(empty)	T
+1681104964.908581	CYoFQbFIXW0lyvCCd	172.16.1.35	61643	17.248.241.204	443	TLSv13	TLS_AES_128_GCM_SHA256	x25519	gateway.icloud.com	F	-	-	T	CsiI	-	-	-
+1681104967.266641	CJO5EL13OMz6qRfRB6	172.16.1.35	61644	17.253.127.212	443	TLSv13	TLS_AES_128_GCM_SHA256	x25519	captive.apple.com	F	-	-	T	CsiI	-	-	-
+#close	2025-06-15-14-01-00

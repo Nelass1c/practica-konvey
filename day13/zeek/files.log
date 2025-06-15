@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2025-06-15-14-01-00
+#fields	ts	fuid	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	string	addr	port	addr	port	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1681104962.794024	FrGvqu2wojwl2KAhFh	CM3uZN1lj9ZkcRHvCa	172.16.1.35	61641	17.248.241.40	443	SSL	0	OCSP_REPLY	application/ocsp-response	-	0.000000	F	F	1459	-	0	0	F	-	-	-	-	-	-	-
+1681104982.969865	FVo6Rk4kDKv3LgT0B7	C6NIwr4JYOXqYTM83e	172.16.1.35	61646	203.161.53.240	80	HTTP	0	(empty)	text/html	-	0.000000	F	F	306	-	0	0	F	-	-	-	-	-	-	-
+1681104983.103027	FkK2Nq4b6INQwdOB3f	CqK0HP2n6v0Oggnvx4	172.16.1.35	61645	203.161.53.240	80	HTTP	0	(empty)	text/html	-	0.000000	F	F	282	282	0	0	F	-	-	-	-	-	-	-
+#close	2025-06-15-14-01-00
