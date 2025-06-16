@@ -66,7 +66,7 @@ ip add 192.168.10.161 255.255.255.248
 no shut
 exit
 hostname R1
-ip domain-name cisco.lab
+ip domain-name test.com
 crypto key generate rsa
 username admin secret cisco
 line vty 0 4
