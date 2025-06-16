@@ -67,22 +67,22 @@ ssh ratka@localhost
 
 ### 3.2. Скриншоты
 
-![Скриншот 1: Обновление системы](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s1.jpg)
+![Скриншот 1: Обновление системы](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s1.jpg)
 *Результат выполнения команд `sudo apt update` и `sudo apt full-upgrade -y`.*
 
-![Скриншот 2: Статус SSH и перегенерация ключей](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s2.jpg)
+![Скриншот 2: Статус SSH и перегенерация ключей](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s2.jpg)
 *Проверка статуса SSH, перемещение старых хост-ключей и запуск `dpkg-reconfigure openssh-server`.*
 
-![Скриншот 3: Редактирование sshd_config и перезапуск SSH](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s3.jpg)
+![Скриншот 3: Редактирование sshd_config и перезапуск SSH](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s3.jpg)
 *Процесс редактирования `/etc/ssh/sshd_config` и перезапуск сервиса SSH.*
 
-![Скриншот 4: Генерация SSH-ключей пользователя и настройка authorized_keys](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s4.jpg)
+![Скриншот 4: Генерация SSH-ключей пользователя и настройка authorized_keys](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s4.jpg)
 *Выполнение `ssh-keygen -t rsa` и установка прав на `~/.ssh/authorized_keys`.*
 
-![Скриншот 5: Тестирование SSH-подключения к localhost](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s5.jpg)
+![Скриншот 5: Тестирование SSH-подключения к localhost](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s5.jpg)
 *Успешное SSH-подключение к `ratka@localhost`.*
 
-![Скриншот 6: Создание снапшота clean-base](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day1/screenshots/s6.jpg)
+![Скриншот 6: Создание снапшота clean-base](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day01/screenshots/s6.jpg)
 
 *Снят снапшот: clean-base.*
 

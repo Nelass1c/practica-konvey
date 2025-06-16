@@ -57,14 +57,14 @@ ipcalc 172.16.0.0 -s 1000
 
 Первой была рассчитана подсеть для 1000 хостов командой `ipcalc 172.16.0.0 -s 1000`, в результате чего была выделена подсеть `172.16.0.0/22`.
 
-![Расчет подсети на 1000 хостов с помощью ipcalc](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day4/subnets/1000_hosts.jpg)
+![Расчет подсети на 1000 хостов с помощью ipcalc](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day04/subnets/1000_hosts.jpg)
 
-Аналогично, используя следующий свободный IP-адрес, были рассчитаны остальные подсети. Скриншоты всех расчетов находятся в папке: [subnets](https://github.com/Nelass1c/practica-konvey/tree/main/day4/subnets).
+Аналогично, используя следующий свободный IP-адрес, были рассчитаны остальные подсети. Скриншоты всех расчетов находятся в папке: [subnets](https://github.com/Nelass1c/practica-konvey/tree/main/day04/subnets).
 
 
 По результатам расчетов была составлена итоговая таблица подсетей:
 
-![Таблица подсетей](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day4/table/table.jpg)
+![Таблица подсетей](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day04/table/table.jpg)
 
 ---
 

@@ -47,13 +47,13 @@ curl http://127.0.0.1:8080
 
 ### 3.2. Скриншоты
 
-![Скриншот 1: Запуск HTTP-сервера и запрос через curl](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s1.jpg)
+![Скриншот 1: Запуск HTTP-сервера и запрос через curl](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day02/screenshots/s1.jpg)
 *Запуск HTTP-сервера, выполнение GET-запроса через `curl` и отображение листинга директории в браузере и HTML-ответ локального HTTP-сервера на запрос `curl`, выведенный в терминал.*
 
-![Скриншот 2: HTML-ответ сервера в терминале](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s2.jpg)
+![Скриншот 2: HTML-ответ сервера в терминале](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day02/screenshots/s2.jpg)
 *Захват и анализ TCP-трафика на интерфейсе `lo` в Wireshark, отображение пакетов трехэтапного рукопожатия.*
 
-![Скриншот 3: Анализ TCP-трафика в Wireshark](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day2/screenshots/s3.jpg)
+![Скриншот 3: Анализ TCP-трафика в Wireshark](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day02/screenshots/s3.jpg)
 
 
 ---
@@ -65,7 +65,7 @@ curl http://127.0.0.1:8080
 - С помощью `curl` был сделан запрос к локальному HTTP-серверу, что сгенерировало сетевой трафик.
 - Сетевой трафик на интерфейсе `lo` был захвачен с использованием Wireshark.
 - В захваченном трафике было идентифицировано трехэтапное TCP-рукопожатие (пакеты SYN, SYN/ACK, ACK) между клиентом (`curl`) и сервером.
-- Захваченный трафик сохранен в файл: [`day02_handshake.pcap`](https://github.com/Nelass1c/practica-konvey/blob/main/day2/wireshark/day02_handshake.pcap).
+- Захваченный трафик сохранен в файл: [`day02_handshake.pcap`](https://github.com/Nelass1c/practica-konvey/blob/main/day02/wireshark/day02_handshake.pcap).
 
 ---
 

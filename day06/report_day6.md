@@ -63,20 +63,20 @@ sudo nmap -sS -p1-1000 -iL hosts.txt -oN ports.txt
 Первым этапом было выполнено сканирование сети `192.168.1.0/24` для обнаружения активных хостов командой `nmap -sn`. Результат выполнения представлен на скриншоте ниже.
 
 
-![Обнаружение хостов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day6/screenshots/hosts.jpg)
+![Обнаружение хостов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day06/screenshots/hosts.jpg)
 
 
 Далее, для каждого найденного хоста было выполнено сканирование портов с 1 по 1000 с помощью команды `nmap -sS`, используя список целей из файла `hosts.txt`.
 
 
-![Сканирование портов, часть 1](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day6/screenshots/ports.jpg)
+![Сканирование портов, часть 1](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day06/screenshots/ports.jpg)
 
-![Сканирование портов, часть 2](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day6/screenshots/ports2.jpg)
+![Сканирование портов, часть 2](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day06/screenshots/ports2.jpg)
 
 
 На основе полученных данных о хостах и их открытых портах была сформирована итоговая таблица для наглядного представления результатов:
 
-![Таблица открытых портов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day6/table/table.jpg)
+![Таблица открытых портов](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day06/table/table.jpg)
 
 ---
 

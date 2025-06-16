@@ -57,15 +57,15 @@ ping -c 4 192.168.1.1
 
 ### 3.2. Скриншоты
 
-![Определение шлюза командой ip route](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day3/screenshots/s1.jpg)
+![Определение шлюза командой ip route](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day03/screenshots/s1.jpg)
 
 Определение IP-адреса шлюза по умолчанию (`192.168.1.1`) и используемого сетевого интерфейса (`eth0`) с помощью команды `ip route`.
 
-![Захват ARP и ICMP трафика](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day3/screenshots/s2.jpg)
+![Захват ARP и ICMP трафика](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day03/screenshots/s2.jpg)
 
 Захват трафика в Wireshark, демонстрирующий ARP-запрос от хоста `192.168.1.49` для определения MAC-адреса шлюза `192.168.1.1`, ARP-ответ от шлюза и последующий обмен ICMP-пакетами (ping).
 
-![Выполнение команды ping к шлюзу](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day3/screenshots/s3.jpg)
+![Выполнение команды ping к шлюзу](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day03/screenshots/s3.jpg)
 
 Выполнение команды `ping -c 4 192.168.1.1` для отправки четырех ICMP Echo Request пакетов на IP-адрес шлюза и получение ответных ICMP Echo Reply.
 
@@ -78,8 +78,8 @@ ping -c 4 192.168.1.1
 *   Перед отправкой первого ICMP-пакета, после очистки ARP-кэша, был зафиксирован обмен ARP-сообщениями: ARP-запрос от хоста `192.168.1.49` для определения MAC-адреса шлюза `192.168.1.1` и ARP-ответ от шлюза.
 *   Сетевой трафик, включающий ARP и ICMP пакеты, был захвачен с использованием Wireshark на интерфейсе `eth0`.
 *   Содержимое ARP-кэша было выведено и сохранено в текстовый файл.
-*   Захваченный сетевой трафик сохранен в файл: [`day3_ping.pcap`](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day3/wireshark/day3_ping.pcap).
-*   Содержимое ARP-кэша сохранено в файл: [`arp_cache.txt`](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day3/arp_cache.txt).
+*   Захваченный сетевой трафик сохранен в файл: [`day3_ping.pcap`](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day03/wireshark/day3_ping.pcap).
+*   Содержимое ARP-кэша сохранено в файл: [`arp_cache.txt`](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day03/arp_cache.txt).
 
 ---
 

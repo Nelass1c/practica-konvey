@@ -66,15 +66,15 @@ curl ifconfig.me
 
 Отключение и последующее подключение интерфейса принудительно запускает процесс получения нового IP-адреса от DHCP-сервера:
 
-![получения нового IP-адреса от DHCP-сервера](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day5/screenshots/s1.jpg)
+![получения нового IP-адреса от DHCP-сервера](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day05/screenshots/s1.jpg)
 
 Наблюдение: Как видно на скриншоте, внешний IPv6-адрес изменился после переподключения, что указывает на его динамический характер. А вот мой внешний IPv4-адрес остался неизменным, что говорит о его статическом назначении провайдером (его я не скринил).
 
-![Проверка внешнего IP и переподключение интерфейса](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day5/screenshots/s2.jpg)
+![Проверка внешнего IP и переподключение интерфейса](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day05/screenshots/s2.jpg)
 
 Параллельно с переподключением интерфейса был запущен захват трафика в Wireshark с фильтром для DHCP (`dhcpv6 || dhcp`). Захват демонстрирует DHCP-обмен, который был инициирован при подключении интерфейса. В данном случае виден не полный цикл DORA, а его сокращенная версия (Request и ACK), так как клиент уже знал свой предыдущий IP-адрес и пытался его подтвердить.
 
-![Захват DHCP-трафика в Wireshark](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day5/screenshots/s3.jpg)
+![Захват DHCP-трафика в Wireshark](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day05/screenshots/s3.jpg)
 
 ---
 
