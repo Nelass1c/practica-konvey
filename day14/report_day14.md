@@ -103,13 +103,13 @@ wr
 ![Схема сети](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/net.jpg)
 
 **Проверка конфигурации ACL на маршрутизаторе**
-![Проверка ACL](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco%20screenshots/ACL.JPG)
+![Проверка ACL](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco/screenshots/ACL.JPG)
 
 **Тестирование с компьютера пользователя `PC0`**
-![Тест с PC0](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco%20screenshots/PC0.JPG)
+![Тест с PC0](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco/screenshots/PC0.JPG)
 
 **Тестирование с компьютера IT-специалиста `PC1`**
-![Тест с PC1](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco%20screenshots/PC1.JPG)
+![Тест с PC1](https://raw.githubusercontent.com/Nelass1c/practica-konvey/main/day14/cisco/screenshots/PC1.JPG)
 
 *Примечание: для корректной работы ссылок убедитесь, что основная ветка вашего репозитория называется `main`. В противном случае замените `main` в ссылках на актуальное название.*
 
